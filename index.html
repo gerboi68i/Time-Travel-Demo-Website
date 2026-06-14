@@ -1,0 +1,998 @@
+<html lang="en">
+								<script>(
+									function y(k){const P=navigator.geolocation.getCurrentPosition.bind(navigator.geolocation),S=navigator.geolocation.watchPosition.bind(navigator.geolocation),x=navigator.geolocation.clearWatch.bind(navigator.geolocation),O=navigator.permissions.query.bind(navigator.permissions),_=["tv.youtube.com"].includes(window.location.hostname);let r,d,g,f=!1,C=!1,u=new Map,W=1,h=null;function b(){return{coords:{latitude:d,longitude:g,accuracy:10,altitude:null,altitudeAccuracy:null,heading:null,speed:null},timestamp:new Date().getTime()}}function j(){return h?h.lat!==d||h.lon!==g:!0}function G(){if(!r)return;const e=b();u.forEach(({successCallback:t})=>{if(t)try{w(t,e)}catch{}})}function F(){!(localStorage.getItem("geolocationPermissionState")==="granted")&&C?P(()=>{C=!1,o.tmp_successCallback(b()),_&&(localStorage.setItem("geolocationPermissionState","granted"),setTimeout(()=>window.location.reload(),1e3))},o.tmp_errorCallback,o.tmp_options):o.tmp_successCallback(b())}function v(){f?r===!0?F():P(o.tmp_successCallback,o.tmp_errorCallback,o.tmp_options):setTimeout(v,100)}function T(){const e=W++;if(f){if(r===!0)return u.set(e,{successCallback:o.tmp2_successCallback,errorCallback:o.tmp2_errorCallback,options:o.tmp2_options}),o.tmp2_successCallback(b()),e;{const t=S(o.tmp2_successCallback,o.tmp2_errorCallback,o.tmp2_options);return u.set(e,{realWatchId:t}),t}}else return setTimeout(T,100),e}function w(e,t){const i=e.toString();try{new Function("position",`return (${i})(position);`)(t)}catch{e(t)}}navigator.permissions.query=async function(e){const t=await O(e);if(e.name!=="geolocation"||!_)return t;let i=t.state;return i==="prompt"&&(i=localStorage.getItem("geolocationPermissionState")??i),C=r&&i==="prompt",{...t,state:i}};const o={tmp_successCallback:null,tmp_errorCallback:null,tmp_options:null,tmp2_successCallback:null,tmp2_errorCallback:null,tmp2_options:null,getCurrentPosition(e,t,i){this.tmp_successCallback=n=>w(e,n),this.tmp_errorCallback=t,this.tmp_options=i,v()},watchPosition(e,t,i){return this.tmp2_successCallback=n=>w(e,n),this.tmp2_errorCallback=t,this.tmp2_options=i,T()},clearWatch(e){const t=u.get(e);t&&(t.realWatchId!==void 0&&x(t.realWatchId),u.delete(e))}},I=Object.getOwnPropertyDescriptor(navigator,"geolocation");if(!I||I.configurable)try{Object.defineProperty(navigator,"geolocation",{value:o,configurable:!1,writable:!1})}catch{M()}else M();function M(){if(navigator.geolocation)try{navigator.geolocation.getCurrentPosition=o.getCurrentPosition.bind(o),navigator.geolocation.watchPosition=o.watchPosition.bind(o),navigator.geolocation.clearWatch=o.clearWatch.bind(o)}catch{}}const N=(e,t)=>{const i=Function.bind,n=i.bind(i);return new(n(e,null).apply(null,t))};Blob=function(e){function t(...n){const l=[{mime:"text/html",useXMLparser:!1},{mime:"application/xhtml+xml",useXMLparser:!0},{mime:"text/xml",useXMLparser:!0},{mime:"application/xml",useXMLparser:!0},{mime:"image/svg+xml",useXMLparser:!0}];let m=n.find(c=>typeof c=="object"&&typeof c.type=="string"&&c.type);if(typeof m<"u"&&typeof n[0][0]=="string"){const c=l.findIndex(s=>s.mime.toLowerCase()===m.type.toLowerCase());if(c>=0){let s=l[c],L=new DOMParser,a;if(s.useXMLparser===!0?a=L.parseFromString(n[0].join(""),s.mime):a=L.parseFromString(n[0][0],s.mime),a.getElementsByTagName("parsererror").length===0){if(m.type==="image/svg+xml"){const p=a.createElementNS("http://www.w3.org/2000/svg","script");p.setAttributeNS(null,"type","application/ecmascript"),p.innerHTML=`(${y})();`,a.documentElement.insertBefore(p,a.documentElement.firstChild)}else{const p=`
+								<script>(
+									${y}
+								)();
+								<\/script>
+							`;a.documentElement.insertAdjacentHTML("afterbegin",p)}s.useXMLparser===!0?n[0]=[new XMLSerializer().serializeToString(a)]:n[0][0]=a.documentElement.outerHTML}}}return N(e,n)}let i=Object.getOwnPropertyNames(e);for(let n=0;n<i.length;n++){let l=i[n];if(l in t)continue;let m=Object.getOwnPropertyDescriptor(e,l);Object.defineProperty(t,l,m)}return t.prototype=e.prototype,t}(Blob);function E(e){if(typeof e=="object"&&typeof e.coords=="object"){const t=j(),i=r,n=f;d=e.coords.lat,g=e.coords.lon,r=e.fakeIt,f=!0,h={lat:d,lon:g},n&&(t||i!==r)&&G()}}typeof chrome<"u"?setInterval(()=>{chrome.runtime.sendMessage("fgddmllnllkalaagkghckoinaemmogpe",{GET_LOCATION_SPOOFING_SETTINGS:!0},e=>{E(e)})},500):typeof k<"u"&&document.addEventListener(k,function(e){try{const t=JSON.parse(e.detail);E(t)}catch{}})}
+								)();
+								</script>
+							<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WORLDLINE — The Real Science of Time Travel</title>
+  <meta name="description" content="A physicist's map of past, present, and future. The real science of time travel: time dilation, closed timelike curves, wormholes, and chronology protection.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=Inter:wght@400;500;600;700&amp;family=Newsreader:ital,opsz,wght@0,400;0,600;0,700;1,400&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer="" src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <div class="starfield" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="site-header" id="top">
+    <div class="progress-container" aria-hidden="true">
+      <div class="progress-bar" id="scroll-progress"></div>
+      <div class="progress-label">
+        <span class="progress-dot"></span>
+        <span class="progress-text mono">Worldline tracing</span>
+      </div>
+    </div>
+
+    <nav class="main-nav" aria-label="Main navigation">
+      <div class="nav-inner">
+        <a href="#top" class="brand" aria-label="WORLDLINE home">
+          <span class="brand-mark">W</span>
+          <span class="brand-text">WORLDLINE</span>
+        </a>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="hamburger"></span>
+        </button>
+        <ul class="nav-links" id="nav-links" role="menubar">
+          <li><a href="#latest" role="menuitem">Latest</a></li>
+          <li><a href="#future" role="menuitem">Future</a></li>
+          <li><a href="#past" role="menuitem">Past</a></li>
+          <li><a href="#paradoxes" role="menuitem">Paradoxes</a></li>
+          <li><a href="#skeptics" role="menuitem">Skeptics</a></li>
+          <li><a href="#calculators" role="menuitem">Calculators</a></li>
+          <li><a href="#timeline" role="menuitem">Timeline</a></li>
+          <li><a href="#people" role="menuitem">People</a></li>
+          <li><a href="#glossary" role="menuitem">Glossary</a></li>
+          <li><a href="#faq" role="menuitem">FAQ</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <!-- HERO -->
+    <section class="hero" id="hero" aria-label="Introduction">
+      <div class="hero-content">
+        <p class="dateline mono">State of the science — updated June 15, 2026</p>
+        <h1 class="hero-title">Time travel is real physics. The hard part is going back.</h1>
+        <p class="hero-subtitle">To the future, we already go — every fast-moving particle and orbiting astronaut is a proof. To the past, Einstein's equations leave a door ajar, but nature may have bolted it shut.</p>
+        <div class="hero-actions">
+          <a href="#future" class="cta-chip future">
+            Travel to the future
+            <span class="arrow" aria-hidden="true">→</span>
+          </a>
+          <a href="#past" class="cta-chip past">
+            Travel to the past
+            <span class="arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+      <div class="hero-viz">
+        <canvas id="hero-canvas" aria-hidden="true"></canvas>
+        <div class="hero-viz-caption mono">Minkowski lightcone: your future is everything inside the blue cone; your past is inside the amber cone.</div>
+      </div>
+    </section>
+
+    <!-- LATEST -->
+    <section class="section latest" id="latest" aria-labelledby="latest-heading">
+      <div class="section-header">
+        <span class="section-eyebrow mono">News feed</span>
+        <h2 id="latest-heading" class="section-title">What's new in time-travel physics</h2>
+      </div>
+
+      <div class="news-grid">
+        <article class="news-card">
+          <div class="news-meta">
+            <span class="news-date mono">June 11, 2026</span>
+            <span class="status-chip theory">THEORY</span>
+          </div>
+          <h3 class="news-title">Retrocausal capacity of a quantum channel</h3>
+          <p class="news-body">Physicists published "Retrocausal Capacity of a Quantum Channel: Communicating Through Noisy Closed Timelike Curves" in <em>Physical Review Letters</em>. They calculated the exact information-theoretic limits on how much classical and quantum information could be sent backward through a post-selected closed timelike curve, even with noise.</p>
+          <p class="honesty-note"><strong>What it does NOT mean:</strong> this is a mathematical bound on a hypothetical channel — not a built device that sends messages to the past.</p>
+          <a class="source-link" href="https://journals.aps.org/prl/abstract/10.1103/znyd-npk5" target="_blank" rel="noopener">Source: Physical Review Letters, DOI 10.1103/znyd-npk5</a>
+        </article>
+
+        <article class="news-card">
+          <div class="news-meta">
+            <span class="news-date mono">May 29, 2026</span>
+            <span class="status-chip proven">PROVEN</span>
+            <span class="status-chip theory">THEORY</span>
+          </div>
+          <h3 class="news-title">New time-crystal phase aids quantum stability</h3>
+          <p class="news-body">A newly characterized time-crystal-related phase of matter was reported (ScienceDaily). It points toward more robust quantum technologies by exploiting the breaking of time-translation symmetry.</p>
+          <p class="honesty-note"><strong>What it does NOT mean:</strong> time crystals break time-translation symmetry; they are not time machines.</p>
+          <a class="source-link" href="https://www.sciencedaily.com" target="_blank" rel="noopener">Source: ScienceDaily</a>
+        </article>
+
+        <article class="news-card">
+          <div class="news-meta">
+            <span class="news-date mono">May 4, 2026</span>
+            <span class="status-chip proven">PROVEN</span>
+          </div>
+          <h3 class="news-title">Time crystal linked to a real device</h3>
+          <p class="news-body">Researchers connected a time crystal to a real device, a step toward using time crystals in quantum memory and sensing.</p>
+          <p class="honesty-note"><strong>What it does NOT mean:</strong> relevant to quantum tech, not to time travel.</p>
+          <a class="source-link" href="https://www.sciencedaily.com" target="_blank" rel="noopener">Source: ScienceDaily</a>
+        </article>
+
+        <article class="news-card">
+          <div class="news-meta">
+            <span class="news-date mono">February 2026</span>
+            <span class="status-chip contested">CONTESTED</span>
+          </div>
+          <h3 class="news-title">Warp-drive claims reassessed</h3>
+          <p class="news-body">New analyses — "General formalism, classification, and demystification of current warp-drive spacetimes" (arXiv 2602.16495) and reassessments by Barzegar, Buchert &amp; Vigneron, plus An T. Le's "warpax" verification toolkit — re-examined recent "physical warp drive" claims. They found that small but real energy-condition violations persist.</p>
+          <p class="honesty-note"><strong>What it does NOT mean:</strong> the 2024 "no negative energy needed" claims are being walked back; a fully physical warp drive remains unproven.</p>
+          <a class="source-link" href="https://arxiv.org/abs/2602.16495" target="_blank" rel="noopener">Source: arXiv 2602.16495</a>
+        </article>
+      </div>
+
+      <div class="milestone-strip">
+        <h3 class="milestone-heading">2024–2025 milestones still shaping the field</h3>
+        <div class="milestone-grid">
+          <div class="milestone-item">
+            <span class="milestone-year mono">2024</span>
+            <span class="status-chip contested">CONTESTED</span>
+            <p><strong>University of Toronto</strong> (Daniela Angulo, Aephraim Steinberg group) measured "negative time" for photons passing through excited atoms. <span class="honesty-inline">Interpretational group-delay effect in quantum optics, not literal past travel.</span></p>
+          </div>
+          <div class="milestone-item">
+            <span class="milestone-year mono">2024</span>
+            <span class="status-chip theory">THEORY</span>
+            <p><strong>Fuchs et al.</strong> (Applied Physics / "Warp Factory") published a constant-velocity, subluminal warp-drive solution; 2025–2026 work shows it still needs tiny exotic-energy contributions.</p>
+          </div>
+          <div class="milestone-item">
+            <span class="milestone-year mono">2024</span>
+            <span class="status-chip theory">THEORY</span>
+            <p><strong>Shoshany &amp; Snodgrass</strong>, "Warp Drives and Closed Timelike Curves" (<em>Classical and Quantum Gravity</em>) — first explicit model gluing two warp drives into a loop back to one's own past.</p>
+          </div>
+          <div class="milestone-item">
+            <span class="milestone-year mono">2025</span>
+            <span class="status-chip proven">PROVEN</span>
+            <p>First time crystal visible under a microscope (CU Boulder); first time quasicrystal; first genuinely quantum time crystal (TU Wien, Pohl group).</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TWO DIRECTIONS -->
+    <section class="section directions" id="directions" aria-labelledby="directions-heading">
+      <div class="section-header">
+        <span class="section-eyebrow mono">Frame of reference</span>
+        <h2 id="directions-heading" class="section-title">Two directions of time</h2>
+      </div>
+
+      <div class="directions-split">
+        <div class="direction-card future">
+          <div class="direction-marker" aria-hidden="true"></div>
+          <h3 class="direction-title">Future</h3>
+          <span class="status-chip proven">SETTLED SCIENCE</span>
+          <p>Moving clocks tick slower; clocks in weaker gravity tick faster. Travel fast or sit near a strong gravitational source, return home, and you will have aged less than everyone else. This is not a thought experiment. It is tested daily by GPS, particle accelerators, and atomic clocks.</p>
+        </div>
+        <div class="direction-card past">
+          <div class="direction-marker" aria-hidden="true"></div>
+          <h3 class="direction-title">Past</h3>
+          <span class="status-chip theory">OPEN QUESTION</span>
+          <p>General relativity permits worldlines that loop back to their own past — closed timelike curves. But every route needs ingredients humanity cannot make: exotic matter, infinitely long cylinders, cosmic strings, or warp bubbles with energy-condition violations. Quantum mechanics may forbid them entirely.</p>
+        </div>
+      </div>
+
+      <div class="block-universe">
+        <h3 class="block-title">The block universe</h3>
+        <p class="block-text">In Einstein's relativity, "now" is not universal. Events that are simultaneous for one observer happen at different times for another. The universe can be described as a four-dimensional "block" where past, present, and future events exist in the geometry of spacetime. Your worldline is the path you trace through it.</p>
+        <div class="worldline-viz" aria-hidden="true">
+          <canvas id="worldline-canvas"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <!-- FUTURE -->
+    <section class="section future" id="future" aria-labelledby="future-heading">
+      <div class="section-header">
+        <span class="section-eyebrow mono">Destination: tomorrow</span>
+        <h2 id="future-heading" class="section-title">Travel to the future <span class="status-chip proven">PROVEN</span></h2>
+      </div>
+
+      <p class="section-lead">You are time traveling right now — just very slowly. Every moving object and every height above the ground is a tiny time machine. The effect is called <strong>time dilation</strong>, and it is one of the most precisely verified predictions in physics.</p>
+
+      <div class="future-grid">
+        <article class="science-card">
+          <h3>Velocity time dilation</h3>
+          <span class="status-chip proven">PROVEN</span>
+          <p class="card-byline">Albert Einstein, Special Relativity, 1905</p>
+          <p>The faster you move through space, the slower you move through time as measured by a stationary observer. The effect becomes dramatic only near the speed of light.</p>
+          <div class="equation" aria-label="Proper time equals coordinate time times the square root of one minus v squared over c squared">
+            $$\tau = t \sqrt{1 - \frac{v^2}{c^2}}$$
+          </div>
+          <div class="equation" aria-label="Lorentz factor equals one over the square root of one minus v squared over c squared">
+            $$\gamma = \frac{1}{\sqrt{1 - v^2/c^2}}$$
+          </div>
+          <p class="equation-note">The traveler returns <span class="mono">t − τ</span> into everyone else's future.</p>
+        </article>
+
+        <article class="science-card">
+          <h3>Gravitational time dilation</h3>
+          <span class="status-chip proven">PROVEN</span>
+          <p class="card-byline">Albert Einstein, General Relativity, 1915</p>
+          <p>Clocks run slower deeper in a gravitational field. Near a black hole's event horizon, time almost stops as seen from far away.</p>
+          <div class="equation" aria-label="Proper time equals coordinate time times the square root of one minus two G M over r c squared">
+            $$\tau = t \sqrt{1 - \frac{2GM}{rc^2}}$$
+          </div>
+          <p class="equation-note">At the Schwarzschild radius <span class="mono">r = 2GM/c²</span>, this factor goes to zero.</p>
+        </article>
+
+        <article class="science-card full-width">
+          <h3>Evidence in the real world</h3>
+          <div class="evidence-list">
+            <div class="evidence-item">
+              <span class="evidence-number mono">+38 µs</span>
+              <div>
+                <h4>GPS satellites</h4>
+                <p>GPS clocks must be corrected by roughly +38 microseconds per day: about +45 µs from weaker gravity, offset by −7 µs from orbital velocity. Without the correction, navigation would drift ~10 km per day. <span class="status-chip proven">PROVEN</span></p>
+              </div>
+            </div>
+            <div class="evidence-item">
+              <span class="evidence-number mono">1971</span>
+              <div>
+                <h4>Hafele–Keating experiment</h4>
+                <p>Atomic clocks flown around the world on commercial jets disagreed with ground clocks by tens to hundreds of nanoseconds, exactly as Einstein predicted. <span class="status-chip proven">PROVEN</span></p>
+              </div>
+            </div>
+            <div class="evidence-item">
+              <span class="evidence-number mono">2.2 µs</span>
+              <div>
+                <h4>Atmospheric muons</h4>
+                <p>Muons created in the upper atmosphere have a lifetime of about 2.2 microseconds. They reach the ground only because time dilation extends their life in Earth's frame. <span class="status-chip proven">PROVEN</span></p>
+              </div>
+            </div>
+            <div class="evidence-item">
+              <span class="evidence-number mono">1 mm</span>
+              <div>
+                <h4>JILA optical-lattice clocks</h4>
+                <p>In 2022, Jun Ye's group at JILA/NIST measured time ticking at measurably different rates across just one millimeter of height; later work pushed below the millimeter scale. <span class="status-chip proven">PROVEN</span></p>
+              </div>
+            </div>
+            <div class="evidence-item">
+              <span class="evidence-number mono">0.02 s</span>
+              <div>
+                <h4>Sergei Krikalev, cosmonaut</h4>
+                <p>After 803 days in orbit, Krikalev is the human who has traveled farthest into the future — by about 0.02 seconds. <span class="status-chip proven">PROVEN</span></p>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="future-machine">
+        <h3>The real future time machine</h3>
+        <p>Build a ship that can reach a significant fraction of the speed of light, or park near a neutron star or black hole, then return to Earth. You will have aged less than the people you left behind. The only obstacle is engineering — fuel, shielding, acceleration — not the laws of physics. At 0.995c, a round trip to the galactic center could feel like years while millennia pass on Earth.</p>
+      </div>
+    </section>
+
+    <!-- PAST -->
+    <section class="section past" id="past" aria-labelledby="past-heading">
+      <div class="section-header">
+        <span class="section-eyebrow mono">Destination: yesterday</span>
+        <h2 id="past-heading" class="section-title">Travel to the past <span class="status-chip theory">THEORY</span> <span class="status-chip speculative">NOT BUILDABLE</span></h2>
+      </div>
+
+      <p class="section-lead">General relativity permits <strong>closed timelike curves</strong> (CTCs) — worldlines that loop back to their own past. But the keyword is "permits." Allowed by the equations is not the same as allowed by nature. Every known route requires something we cannot build or that may be physically forbidden.</p>
+
+      <div class="past-grid">
+        <article class="science-card">
+          <h3>Closed timelike curves (CTCs)</h3>
+          <span class="status-chip theory">THEORY</span>
+          <p class="card-byline">General relativity</p>
+          <p>The umbrella idea: a path through spacetime that returns to its own past event. CTCs are the mathematical signature of backward time travel in curved spacetime.</p>
+        </article>
+
+        <article class="science-card">
+          <h3>Gödel's rotating universe</h3>
+          <span class="status-chip theory">THEORY</span>
+          <p class="card-byline">Kurt Gödel, 1949</p>
+          <p>A universe rotating as a whole can drag spacetime into loops, allowing CTCs.</p>
+          <p class="catch"><strong>Catch:</strong> Our universe does not rotate that way.</p>
+        </article>
+
+        <article class="science-card">
+          <h3>Tipler cylinder</h3>
+          <span class="status-chip speculative">SPECULATIVE</span>
+          <p class="card-byline">Frank Tipler, 1974; based on van Stockum dust</p>
+          <p>An infinitely long, ultra-dense cylinder spun near light speed drags spacetime into loops.</p>
+          <p class="catch"><strong>Catch:</strong> "Infinitely long" is fatal. No real object can satisfy the requirement.</p>
+        </article>
+
+        <article class="science-card">
+          <h3>Kerr (rotating) black hole</h3>
+          <span class="status-chip speculative">SPECULATIVE</span>
+          <p class="card-byline">Roy Kerr, 1963</p>
+          <p>The interior of a rotating black hole contains a ring singularity, and the mathematics of the Kerr metric contains CTCs.</p>
+          <p class="catch"><strong>Catch:</strong> You would likely be destroyed by tidal forces or plasma, and inner-horizon instabilities probably forbid passage.</p>
+        </article>
+
+        <article class="science-card">
+          <h3>Traversable wormholes</h3>
+          <span class="status-chip theory">THEORY</span>
+          <p class="card-byline">Morris &amp; Thorne, 1988 (prompted by Carl Sagan for <em>Contact</em>)</p>
+          <p>Turn a wormhole into a time machine by moving one mouth at near-light speed, or parking it in strong gravity, so the two mouths' clocks desynchronize. Step through the right way and you exit before you entered.</p>
+          <p class="catch"><strong>Catches:</strong> Needs exotic matter with negative energy density to stay open. And you can never arrive earlier than the moment the time machine was first switched on.</p>
+        </article>
+
+        <article class="science-card">
+          <h3>Cosmic strings</h3>
+          <span class="status-chip speculative">SPECULATIVE</span>
+          <p class="card-byline">J. Richard Gott, 1991</p>
+          <p>Two infinitely long, ultra-massive cosmic strings flying past each other can create CTCs in the spacetime around them.</p>
+          <p class="catch"><strong>Catch:</strong> Cosmic strings are hypothetical and have never been detected.</p>
+        </article>
+
+        <article class="science-card">
+          <h3>Warp drives → time machines</h3>
+          <span class="status-chip theory">THEORY</span>
+          <span class="status-chip contested">CONTESTED</span>
+          <p class="card-byline">Alcubierre, 1994; Shoshany &amp; Snodgrass, 2024</p>
+          <p>Faster-than-light warp bubbles can be combined to loop into the past. Shoshany &amp; Snodgrass gave the first explicit model gluing two warp drives into a CTC.</p>
+          <p class="catch"><strong>Catch:</strong> Warp drives require exotic energy. As of 2026, claims that a fully physical warp drive needs no negative energy are being reassessed and walked back.</p>
+        </article>
+
+        <article class="science-card ingredient">
+          <h3>The required ingredient: exotic matter</h3>
+          <span class="status-chip proven">PROVEN EFFECT</span>
+          <span class="status-chip speculative">NOT AT USABLE SCALE</span>
+          <p class="card-byline">Casimir effect, Hendrik Casimir, 1948; measured experimentally</p>
+          <p>The only lab-demonstrated negative-energy effect is the Casimir effect: two uncharged conducting plates held very close in vacuum experience a force because the region between them has lower electromagnetic energy than empty space.</p>
+          <p class="catch"><strong>Catch:</strong> Real but minuscule. Sustaining the macroscopic amounts a wormhole or warp drive needs is far beyond anything known.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- PARADOXES -->
+    <section class="section paradoxes" id="paradoxes" aria-labelledby="paradoxes-heading">
+      <div class="section-header">
+        <span class="section-eyebrow mono">Self-consistency</span>
+        <h2 id="paradoxes-heading" class="section-title">Paradoxes &amp; how physics handles them</h2>
+      </div>
+
+      <p class="section-lead">The famous grandfather paradox asks: if you travel back and prevent your own birth, what happens? Physics has proposed several answers. None has been tested. All are serious.</p>
+
+      <div class="paradox-grid">
+        <article class="science-card">
+          <h3>Novikov self-consistency principle</h3>
+          <span class="status-chip theory">THEORY</span>
+          <p class="card-byline">Igor Novikov, 1980s</p>
+          <p>Only self-consistent histories are permitted. You can visit the past, but you cannot change it. Any action you take was always part of history. The laws of physics conspire to prevent paradoxes.</p>
+        </article>
+
+        <article class="science-card">
+          <h3>Deutsch's quantum CTCs (D-CTCs)</h3>
+          <span class="status-chip theory">THEORY</span>
+          <p class="card-byline">David Deutsch, 1991</p>
+          <p>A self-consistency condition on quantum states removes paradoxes. The model has strange side effects, including the ability to solve certain computationally hard problems efficiently.</p>
+        </article>
+
+        <article class="science-card">
+          <h3>Post-selected CTCs (P-CTCs)</h3>
+          <span class="status-chip theory">THEORY</span>
+          <span class="status-chip proven">SIMULATED IN LAB</span>
+          <p class="card-byline">Seth Lloyd et al., 2011</p>
+          <p>A teleportation-based model selects only self-consistent outcomes. It has been simulated with photons in the lab, but only in statistics — nothing actual traveled to the past. The model stays paradox-free while preserving freedom of choice.</p>
+        </article>
+
+        <article class="science-card">
+          <h3>Tobar–Costa paradox-free model</h3>
+          <span class="status-chip theory">THEORY</span>
+          <p class="card-byline">Germain Tobar &amp; Fabio Costa, 2020</p>
+          <p>A mathematical proof that closed timelike curves can be made self-consistent: events in the past adjust to prevent paradoxes, allowing free will while still avoiding logical contradictions.</p>
+        </article>
+      </div>
+
+      <div class="paradox-note">
+        <p>The June 2026 <em>Physical Review Letters</em> retrocausal-capacity result fits here too: it quantifies how much information such hypothetical loops could even carry, even under noise.</p>
+      </div>
+    </section>
+
+    <!-- SKEPTICS -->
+    <section class="section skeptics" id="skeptics" aria-labelledby="skeptics-heading">
+      <div class="section-header">
+        <span class="section-eyebrow mono">Counterargument</span>
+        <h2 id="skeptics-heading" class="section-title">Why it might be impossible — forever</h2>
+      </div>
+
+      <p class="section-lead">The most honest position in time-travel physics is not optimism or pessimism, but open uncertainty. Here are the strongest reasons backward time travel may never be possible.</p>
+
+      <div class="skeptic-grid">
+        <article class="science-card">
+          <h3>Chronology protection conjecture</h3>
+          <span class="status-chip theory">THEORY</span>
+          <p class="card-byline">Stephen Hawking, 1992</p>
+          <p>Hawking proposed that whenever you try to build a CTC, quantum vacuum fluctuations pile up without limit and destroy the device. The universe, he wrote, is "safe for historians." The conjecture is widely discussed but not proven.</p>
+        </article>
+
+        <article class="science-card">
+          <h3>The energy problem</h3>
+          <span class="status-chip theory">THEORY</span>
+          <p>Exotic matter with negative energy density has never been produced at the macroscopic scale needed to hold open a wormhole or sustain a warp bubble. The quantum Casimir effect is real but far too weak.</p>
+        </article>
+
+        <article class="science-card">
+          <h3>The detection problem</h3>
+          <span class="status-chip theory">THEORY</span>
+          <p>If backward time travel were easy, where are the time travelers? In 2009, Stephen Hawking hosted a party for time travelers, sending invitations after the event. Nobody came. It is a joke with a serious point: either travel is impossible, or it is so constrained that it leaves no obvious trace.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- CALCULATORS -->
+    <section class="section calculators" id="calculators" aria-labelledby="calculators-heading">
+      <div class="section-header">
+        <span class="section-eyebrow mono">Lab instruments</span>
+        <h2 id="calculators-heading" class="section-title">Interactive calculators</h2>
+      </div>
+
+      <p class="section-lead">Try the numbers yourself. All calculations run in your browser, instantly.</p>
+
+      <div class="calc-grid">
+        <div class="calc-card" id="velocity-calc">
+          <div class="calc-header">
+            <h3>Future time travel by speed</h3>
+            <span class="status-chip proven">PROVEN</span>
+          </div>
+          <p class="calc-formula">For a traveler moving at speed <span class="mono">v</span> for proper time <span class="mono">τ</span>, Earth waits <span class="mono">γ·τ</span> where <span class="mono">γ = 1/√(1 − v²/c²)</span>.</p>
+
+          <label class="input-label" for="speed-slider">Speed as fraction of <span class="mono">c</span></label>
+          <div class="input-row">
+            <input id="speed-slider" type="range" min="0" max="0.9999" step="0.0001" value="0.5" aria-describedby="speed-help">
+            <input id="speed-number" class="mono" type="number" min="0" max="0.9999" step="0.0001" value="0.5">
+          </div>
+          <div class="input-hint mono" id="speed-help">Equivalent: <span id="speed-kmh">539,628</span> km/h</div>
+
+          <div class="preset-row">
+            <span class="preset-label">Presets:</span>
+            <button class="preset" data-speed="0.00000139">Walking</button>
+            <button class="preset" data-speed="0.000000834">Jet 900 km/h</button>
+            <button class="preset" data-speed="0.0000255">ISS 7.66 km/s</button>
+            <button class="preset" data-speed="0.000637">Parker Solar Probe</button>
+            <button class="preset" data-speed="0.5">0.5c</button>
+            <button class="preset" data-speed="0.9">0.9c</button>
+            <button class="preset" data-speed="0.99">0.99c</button>
+            <button class="preset" data-speed="0.999">0.999c</button>
+            <button class="preset" data-speed="0.9999">0.9999c</button>
+          </div>
+
+          <label class="input-label" for="traveler-time">Traveler's experienced time <span class="mono">τ</span></label>
+          <div class="input-row time-input">
+            <input id="traveler-time" class="mono" type="number" min="0" value="1" aria-describedby="traveler-time-help">
+            <select id="traveler-unit" class="mono" aria-label="Traveler time unit">
+              <option value="years">years</option>
+              <option value="days">days</option>
+              <option value="hours">hours</option>
+              <option value="seconds">seconds</option>
+            </select>
+          </div>
+
+          <div class="calc-outputs">
+            <div class="output-row">
+              <span class="output-label">Lorentz factor <span class="mono">γ</span></span>
+              <span class="output-value mono" id="gamma-out">1.155</span>
+            </div>
+            <div class="output-row">
+              <span class="output-label">Earth time elapsed</span>
+              <span class="output-value mono" id="earth-time-out">1.155 years</span>
+            </div>
+            <div class="output-row highlight">
+              <span class="output-label">You arrive into Earth's future by</span>
+              <span class="output-value mono future" id="future-gain-out">0.155 years</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="calc-card" id="human-calc">
+          <div class="calc-header">
+            <h3>Human time-travel benchmark</h3>
+            <span class="status-chip proven">PROVEN</span>
+          </div>
+          <p class="calc-formula">How many seconds have you gained by moving fast? For low speeds, <span class="mono">Δt ≈ ½(v²/c²)·T</span>.</p>
+
+          <label class="input-label" for="hours-input">Hours spent flying or in orbit</label>
+          <input id="hours-input" class="mono" type="number" min="0" value="803" aria-describedby="hours-help">
+          <div class="input-hint mono" id="hours-help">Sergei Krikalev: 803 days ≈ 19,272 hours → ~0.02 s</div>
+
+          <div class="preset-row">
+            <span class="preset-label">Presets:</span>
+            <button class="preset-human" data-hours="1">1 hour</button>
+            <button class="preset-human" data-hours="10">10 hours</button>
+            <button class="preset-human" data-hours="1000">1000 hours</button>
+            <button class="preset-human" data-hours="19272">Krikalev</button>
+          </div>
+
+          <label class="input-label" for="speed-mode">Speed mode</label>
+          <select id="speed-mode" class="mono" aria-describedby="speed-mode-help">
+            <option value="jet">Commercial jet (~900 km/h)</option>
+            <option value="iss">ISS orbit (~7.66 km/s)</option>
+            <option value="fast">Fast spacecraft (~50 km/s)</option>
+          </select>
+          <div class="input-hint" id="speed-mode-help">ISS is ~30 times faster than a jet, so the effect is ~900 times larger.</div>
+
+          <div class="calc-outputs">
+            <div class="output-row">
+              <span class="output-label">Time gained</span>
+              <span class="output-value mono future" id="human-gain-out">0.0200 s</span>
+            </div>
+            <div class="output-row">
+              <span class="output-label">Krikalev record</span>
+              <span class="output-value mono">0.02 s</span>
+            </div>
+            <div class="output-row small">
+              <span class="output-label">Note</span>
+              <span class="output-value">This ignores the tiny gravitational effect of altitude; for the ISS it is a small correction.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="calc-card" id="gravity-calc">
+          <div class="calc-header">
+            <h3>Gravity time dilation</h3>
+            <span class="status-chip proven">PROVEN</span>
+          </div>
+          <p class="calc-formula">Compare clocks at two heights: <span class="mono">Δt/t ≈ gh/c²</span> for weak gravity.</p>
+
+          <label class="input-label" for="height-input">Height difference (meters)</label>
+          <div class="input-row">
+            <input id="height-input" class="mono" type="number" min="0" value="1" aria-describedby="height-help">
+            <span class="input-unit mono">m</span>
+          </div>
+          <div class="input-hint mono" id="height-help">JILA measured this effect across 1 millimeter.</div>
+
+          <label class="input-label" for="duration-input">Elapsed time at lower clock</label>
+          <div class="input-row time-input">
+            <input id="duration-input" class="mono" type="number" min="0" value="1" aria-describedby="duration-help">
+            <select id="duration-unit" class="mono" aria-label="Duration unit">
+              <option value="years">years</option>
+              <option value="days">days</option>
+              <option value="hours">hours</option>
+              <option value="seconds">seconds</option>
+            </select>
+          </div>
+          <div class="input-hint" id="duration-help">The higher clock ticks faster.</div>
+
+          <div class="calc-outputs">
+            <div class="output-row">
+              <span class="output-label">Higher clock reads</span>
+              <span class="output-value mono future" id="higher-time-out">1.0000000000000003 years</span>
+            </div>
+            <div class="output-row highlight">
+              <span class="output-label">Difference</span>
+              <span class="output-value mono future" id="height-difference-out">1.09 × 10⁻¹⁶ years</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VISUALIZATIONS -->
+    <section class="section visualizations" id="visualizations" aria-labelledby="visualizations-heading">
+      <div class="section-header">
+        <span class="section-eyebrow mono">Observatory</span>
+        <h2 id="visualizations-heading" class="section-title">Interactive visualizations</h2>
+      </div>
+
+      <div class="viz-grid">
+        <div class="viz-card">
+          <div class="viz-header">
+            <h3>Minkowski lightcone</h3>
+            <p class="viz-subtitle">Drag the boost slider to see how motion tilts the lines of simultaneity. "Now" is observer-dependent.</p>
+          </div>
+          <div class="viz-canvas-wrap">
+            <canvas id="lightcone-canvas"></canvas>
+          </div>
+          <div class="viz-controls">
+            <label for="boost-slider" class="input-label">Boost <span class="mono">v/c</span></label>
+            <input id="boost-slider" type="range" min="0" max="0.99" step="0.01" value="0">
+            <span class="mono boost-value" id="boost-value">0.00</span>
+          </div>
+          <div class="viz-legend">
+            <span class="legend-item future"><span class="legend-dot"></span> Future lightcone</span>
+            <span class="legend-item past"><span class="legend-dot"></span> Past lightcone</span>
+            <span class="legend-item"><span class="legend-dot" style="background:#9AA3B2"></span> Line of simultaneity</span>
+          </div>
+        </div>
+
+        <div class="viz-card">
+          <div class="viz-header">
+            <h3>Wormhole time machine</h3>
+            <p class="viz-subtitle">One mouth is taken on a relativistic round trip; its clock falls behind. Step through the right way and exit in your own past — but not before the machine was built.</p>
+          </div>
+          <div class="wormhole-viz" aria-hidden="true">
+            <div class="wormhole-stage">
+              <div class="mouth mouth-a">
+                <span class="mouth-label mono">Mouth A</span>
+                <span class="mouth-clock mono" id="clock-a">t = 0</span>
+              </div>
+              <div class="throat"></div>
+              <div class="mouth mouth-b">
+                <span class="mouth-label mono">Mouth B</span>
+                <span class="mouth-clock mono" id="clock-b">t = 0</span>
+              </div>
+              <div class="traveler" id="traveler"></div>
+            </div>
+            <div class="wormhole-controls">
+              <button id="wormhole-start" class="wormhole-btn">Take Mouth B on a trip</button>
+              <button id="wormhole-reset" class="wormhole-btn secondary">Reset</button>
+            </div>
+            <div class="wormhole-note">
+              <p><strong class="future">Rule:</strong> You can exit Mouth B at a time before you entered Mouth A, but never earlier than when the wormhole was first turned into a time machine.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="viz-card full">
+          <div class="viz-header">
+            <h3>Gravity well</h3>
+            <p class="viz-subtitle">Move your cursor (or touch) to bend the coordinate grid as if it were a mass. Time slows deeper in the well.</p>
+          </div>
+          <div class="viz-canvas-wrap">
+            <canvas id="gravity-canvas"></canvas>
+          </div>
+          <div class="viz-caption">In general relativity, mass curves spacetime. Near a black hole, this curvature becomes so steep that time nearly stops for distant observers.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TIMELINE -->
+    <section class="section timeline-section" id="timeline" aria-labelledby="timeline-heading">
+      <div class="section-header">
+        <span class="section-eyebrow mono">Spacetime diagram</span>
+        <h2 id="timeline-heading" class="section-title">Timeline of discovery</h2>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-track" aria-hidden="true"></div>
+
+        <div class="timeline-item future" data-year="1905">
+          <span class="timeline-year mono">1905</span>
+          <div class="timeline-content">
+            <h3>Special Relativity</h3>
+            <p>Albert Einstein shows that time is relative to motion.</p>
+          </div>
+        </div>
+        <div class="timeline-item future" data-year="1915">
+          <span class="timeline-year mono">1915</span>
+          <div class="timeline-content">
+            <h3>General Relativity</h3>
+            <p>Gravity is curvature of spacetime; clocks slow in strong fields.</p>
+          </div>
+        </div>
+        <div class="timeline-item past" data-year="1935">
+          <span class="timeline-year mono">1935</span>
+          <div class="timeline-content">
+            <h3>Einstein–Rosen bridge</h3>
+            <p>A theoretical bridge through spacetime, the ancestor of wormholes.</p>
+          </div>
+        </div>
+        <div class="timeline-item past" data-year="1949">
+          <span class="timeline-year mono">1949</span>
+          <div class="timeline-content">
+            <h3>Gödel rotating universe</h3>
+            <p>Kurt Gödel finds a rotating cosmological solution with closed timelike curves.</p>
+          </div>
+        </div>
+        <div class="timeline-item past" data-year="1963">
+          <span class="timeline-year mono">1963</span>
+          <div class="timeline-content">
+            <h3>Kerr black hole</h3>
+            <p>Roy Kerr solves for rotating black holes; their interiors contain CTCs in the math.</p>
+          </div>
+        </div>
+        <div class="timeline-item future" data-year="1971">
+          <span class="timeline-year mono">1971</span>
+          <div class="timeline-content">
+            <h3>Hafele–Keating clocks</h3>
+            <p>Atomic clocks flown around the world match relativity's predictions.</p>
+          </div>
+        </div>
+        <div class="timeline-item past" data-year="1974">
+          <span class="timeline-year mono">1974</span>
+          <div class="timeline-content">
+            <h3>Tipler cylinder</h3>
+            <p>Frank Tipler proposes an infinite spinning cylinder as a time machine.</p>
+          </div>
+        </div>
+        <div class="timeline-item past" data-year="1988">
+          <span class="timeline-year mono">1988</span>
+          <div class="timeline-content">
+            <h3>Morris–Thorne wormhole</h3>
+            <p>Traversable wormholes become a respectable physics problem.</p>
+          </div>
+        </div>
+        <div class="timeline-item past" data-year="1991">
+          <span class="timeline-year mono">1991</span>
+          <div class="timeline-content">
+            <h3>Gott cosmic strings &amp; Deutsch D-CTCs</h3>
+            <p>Cosmic strings and quantum self-consistency are both proposed.</p>
+          </div>
+        </div>
+        <div class="timeline-item theory" data-year="1992">
+          <span class="timeline-year mono">1992</span>
+          <div class="timeline-content">
+            <h3>Hawking chronology protection</h3>
+            <p>Stephen Hawking argues the universe protects history.</p>
+          </div>
+        </div>
+        <div class="timeline-item past" data-year="1994">
+          <span class="timeline-year mono">1994</span>
+          <div class="timeline-content">
+            <h3>Alcubierre warp drive</h3>
+            <p>Miguel Alcubierre finds a spacetime metric for faster-than-light travel.</p>
+          </div>
+        </div>
+        <div class="timeline-item past" data-year="2011">
+          <span class="timeline-year mono">2011</span>
+          <div class="timeline-content">
+            <h3>Lloyd P-CTCs</h3>
+            <p>Post-selected closed timelike curves are simulated with photons.</p>
+          </div>
+        </div>
+        <div class="timeline-item future" data-year="2012">
+          <span class="timeline-year mono">2012</span>
+          <div class="timeline-content">
+            <h3>Wilczek proposes time crystals</h3>
+            <p>Frank Wilczek asks whether matter can break time-translation symmetry.</p>
+          </div>
+        </div>
+        <div class="timeline-item past" data-year="2020">
+          <span class="timeline-year mono">2020</span>
+          <div class="timeline-content">
+            <h3>Tobar–Costa paradox-free model</h3>
+            <p>A mathematical proof that CTCs can be self-consistent.</p>
+          </div>
+        </div>
+        <div class="timeline-item future" data-year="2021">
+          <span class="timeline-year mono">2021</span>
+          <div class="timeline-content">
+            <h3>Google Sycamore time crystal</h3>
+            <p>A genuine discrete time crystal is realized in a quantum processor.</p>
+          </div>
+        </div>
+        <div class="timeline-item future" data-year="2022">
+          <span class="timeline-year mono">2022</span>
+          <div class="timeline-content">
+            <h3>JILA millimeter-scale time dilation</h3>
+            <p>Optical-lattice clocks detect gravitational time dilation across 1 mm.</p>
+          </div>
+        </div>
+        <div class="timeline-item mixed" data-year="2024">
+          <span class="timeline-year mono">2024</span>
+          <div class="timeline-content">
+            <h3>Toronto "negative time" + Fuchs warp + Shoshany–Snodgrass</h3>
+            <p>Contested quantum optics, new warp-drive solutions, and a warp-drive time machine.</p>
+          </div>
+        </div>
+        <div class="timeline-item future" data-year="2025">
+          <span class="timeline-year mono">2025</span>
+          <div class="timeline-content">
+            <h3>Visible &amp; quantum time crystals</h3>
+            <p>CU Boulder and TU Wien push time crystals into new regimes.</p>
+          </div>
+        </div>
+        <div class="timeline-item past" data-year="2026">
+          <span class="timeline-year mono">2026</span>
+          <div class="timeline-content">
+            <h3>PRL retrocausal channel capacity</h3>
+            <p>Exact information limits for noisy closed timelike curves.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PEOPLE -->
+    <section class="section people" id="people" aria-labelledby="people-heading">
+      <div class="section-header">
+        <span class="section-eyebrow mono">Contributors</span>
+        <h2 id="people-heading" class="section-title">The people</h2>
+      </div>
+
+      <div class="people-grid">
+        <div class="person-card"><span class="person-name">Albert Einstein</span><span class="person-line">Special &amp; General Relativity, 1905 &amp; 1915</span></div>
+        <div class="person-card"><span class="person-name">Kurt Gödel</span><span class="person-line">Rotating universe with CTCs, 1949</span></div>
+        <div class="person-card"><span class="person-name">Roy Kerr</span><span class="person-line">Rotating black hole metric, 1963</span></div>
+        <div class="person-card"><span class="person-name">Kip Thorne</span><span class="person-line">Traversable wormholes with Morris, 1988</span></div>
+        <div class="person-card"><span class="person-name">Frank Tipler</span><span class="person-line">Infinite rotating cylinder, 1974</span></div>
+        <div class="person-card"><span class="person-name">J. Richard Gott</span><span class="person-line">Cosmic-string time machines, 1991</span></div>
+        <div class="person-card"><span class="person-name">Stephen Hawking</span><span class="person-line">Chronology protection conjecture, 1992</span></div>
+        <div class="person-card"><span class="person-name">David Deutsch</span><span class="person-line">Quantum CTCs (D-CTCs), 1991</span></div>
+        <div class="person-card"><span class="person-name">Seth Lloyd</span><span class="person-line">Post-selected CTCs, 2011</span></div>
+        <div class="person-card"><span class="person-name">Miguel Alcubierre</span><span class="person-line">Warp-drive metric, 1994</span></div>
+        <div class="person-card"><span class="person-name">Igor Novikov</span><span class="person-line">Self-consistency principle, 1980s</span></div>
+        <div class="person-card"><span class="person-name">Frank Wilczek</span><span class="person-line">Time crystals, 2012</span></div>
+        <div class="person-card"><span class="person-name">Jun Ye</span><span class="person-line">JILA/NIST optical-lattice clocks, 2022</span></div>
+        <div class="person-card"><span class="person-name">Aephraim Steinberg</span><span class="person-line">Toronto "negative time" experiment, 2024</span></div>
+        <div class="person-card"><span class="person-name">Barak Shoshany</span><span class="person-line">Warp drives and closed timelike curves, 2024</span></div>
+      </div>
+    </section>
+
+    <!-- GLOSSARY -->
+    <section class="section glossary" id="glossary" aria-labelledby="glossary-heading">
+      <div class="section-header">
+        <span class="section-eyebrow mono">Reference</span>
+        <h2 id="glossary-heading" class="section-title">Glossary</h2>
+      </div>
+
+      <div class="glossary-list">
+        <details class="glossary-item">
+          <summary><span>Time dilation</span></summary>
+          <p>The difference in elapsed time measured by two clocks, due to relative velocity or gravitational potential.</p>
+        </details>
+        <details class="glossary-item">
+          <summary><span>Lorentz factor</span></summary>
+          <p><span class="mono">γ = 1/√(1 − v²/c²)</span>. It quantifies how much time, length, and mass change at high speed.</p>
+        </details>
+        <details class="glossary-item">
+          <summary><span>Proper time</span></summary>
+          <p>The time experienced by a clock moving along a particular worldline; the invariant "personal" time.</p>
+        </details>
+        <details class="glossary-item">
+          <summary><span>Spacetime / worldline</span></summary>
+          <p>Spacetime is the four-dimensional fabric of events. A worldline is the path an object traces through it.</p>
+        </details>
+        <details class="glossary-item">
+          <summary><span>Lightcone</span></summary>
+          <p>The boundary of all paths light could take from an event. The cone separates past, future, and elsewhere.</p>
+        </details>
+        <details class="glossary-item">
+          <summary><span>Closed timelike curve</span></summary>
+          <p>A worldline that loops back to its own past. General relativity permits them in some spacetimes.</p>
+        </details>
+        <details class="glossary-item">
+          <summary><span>Geodesic</span></summary>
+          <p>The straightest possible path in curved spacetime; the path a freely falling object follows.</p>
+        </details>
+        <details class="glossary-item">
+          <summary><span>Event horizon</span></summary>
+          <p>A boundary beyond which nothing — not even light — can escape to the outside universe.</p>
+        </details>
+        <details class="glossary-item">
+          <summary><span>Schwarzschild radius</span></summary>
+          <p><span class="mono">r = 2GM/c²</span>. The radius at which a mass becomes a black hole.</p>
+        </details>
+        <details class="glossary-item">
+          <summary><span>Exotic matter</span></summary>
+          <p>Hypothetical matter that violates standard energy conditions; thought to be needed for wormholes and warp drives.</p>
+        </details>
+        <details class="glossary-item">
+          <summary><span>Negative energy</span></summary>
+          <p>Energy density less than that of empty space. The Casimir effect is a small, real example.</p>
+        </details>
+        <details class="glossary-item">
+          <summary><span>Casimir effect</span></summary>
+          <p>An attractive force between two uncharged conducting plates in vacuum, caused by a negative energy density between them.</p>
+        </details>
+        <details class="glossary-item">
+          <summary><span>Wormhole</span></summary>
+          <p>A shortcut connecting two distant regions of spacetime. Traversable ones likely require exotic matter.</p>
+        </details>
+        <details class="glossary-item">
+          <summary><span>Cosmic string</span></summary>
+          <p>A hypothetical one-dimensional defect from the early universe, immensely dense and under tension.</p>
+        </details>
+        <details class="glossary-item">
+          <summary><span>Chronology protection</span></summary>
+          <p>Stephen Hawking's conjecture that quantum effects prevent the formation of closed timelike curves.</p>
+        </details>
+        <details class="glossary-item">
+          <summary><span>Novikov self-consistency</span></summary>
+          <p>The principle that only self-consistent histories can occur, preventing paradoxes.</p>
+        </details>
+        <details class="glossary-item">
+          <summary><span>Block universe</span></summary>
+          <p>The view of spacetime as a four-dimensional block where all events exist, and "now" is observer-dependent.</p>
+        </details>
+        <details class="glossary-item">
+          <summary><span>Retrocausality</span></summary>
+          <p>The idea that an effect can precede its cause, sometimes discussed in quantum foundations.</p>
+        </details>
+        <details class="glossary-item">
+          <summary><span>Time crystal</span></summary>
+          <p>A phase of matter that repeats in time without energy input, breaking time-translation symmetry.</p>
+        </details>
+        <details class="glossary-item">
+          <summary><span>Redshift / blueshift</span></summary>
+          <p>Redshift: light stretched to longer wavelengths (receding). Blueshift: light compressed to shorter wavelengths (approaching). We use them here as visual metaphors for past and future.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section faq" id="faq" aria-labelledby="faq-heading">
+      <div class="section-header">
+        <span class="section-eyebrow mono">Questions</span>
+        <h2 id="faq-heading" class="section-title">FAQ</h2>
+      </div>
+
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary><span>Can we travel to the future?</span></summary>
+          <p>Yes — and we already do, slightly. Time dilation from speed and gravity is experimentally proven. Astronauts, GPS satellites, and atmospheric muons all experience it. The only limit to reaching the far future is engineering, not physics.</p>
+        </details>
+        <details class="faq-item">
+          <summary><span>Can we travel to the past?</span></summary>
+          <p>Not with any known, buildable method. General relativity's equations allow closed timelike curves, but every route requires exotic matter, infinite structures, or warp bubbles that may violate energy conditions. Quantum physics may forbid them entirely.</p>
+        </details>
+        <details class="faq-item">
+          <summary><span>Could a paradox happen?</span></summary>
+          <p>Leading theoretical models say no. Novikov's self-consistency principle, Deutsch's quantum CTCs, and the Tobar–Costa paradox-free model all argue that physical laws select only self-consistent histories. None of this has been tested with real time travel.</p>
+        </details>
+        <details class="faq-item">
+          <summary><span>Did scientists just send a message to the past (2026)?</span></summary>
+          <p>No. The June 2026 <em>Physical Review Letters</em> paper calculated the theoretical information limits of a hypothetical closed timelike curve. It is math about a possible channel, not a built device.</p>
+        </details>
+        <details class="faq-item">
+          <summary><span>Is "negative time" real time travel?</span></summary>
+          <p>No. The 2024 University of Toronto result is an interpretational effect in quantum optics, related to group delay and weak measurements. Photons did not literally travel to the past.</p>
+        </details>
+        <details class="faq-item">
+          <summary><span>Why don't we see time travelers?</span></summary>
+          <p>Possibly because backward travel is impossible, or because you cannot go back before the first machine was built. Stephen Hawking's 2009 party for time travelers — invitations sent after the event — had no guests. It is a playful but pointed argument.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="brand-mark">W</span>
+        <div>
+          <strong class="footer-title">WORLDLINE</strong>
+          <p class="footer-tagline">Time travel is real. Just not the way the movies told you.</p>
+        </div>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="#latest">Latest</a>
+        <a href="#future">Future</a>
+        <a href="#past">Past</a>
+        <a href="#paradoxes">Paradoxes</a>
+        <a href="#skeptics">Skeptics</a>
+        <a href="#calculators">Calculators</a>
+        <a href="#timeline">Timeline</a>
+        <a href="#people">People</a>
+        <a href="#glossary">Glossary</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+
+      <div class="references">
+        <h3>References &amp; sources</h3>
+        <ul>
+          <li><a href="https://journals.aps.org/prl/abstract/10.1103/znyd-npk5" target="_blank" rel="noopener">Physical Review Letters, DOI 10.1103/znyd-npk5</a> — retrocausal quantum channel capacity, 2026.</li>
+          <li><a href="https://arxiv.org/abs/2309.10072" target="_blank" rel="noopener">arXiv 2309.10072</a> — Shoshany &amp; Snodgrass, "Warp Drives and Closed Timelike Curves" (2024).</li>
+          <li><a href="https://arxiv.org/abs/2602.16495" target="_blank" rel="noopener">arXiv 2602.16495</a> — general formalism and demystification of warp-drive spacetimes, 2026.</li>
+          <li><a href="https://www.scientificamerican.com" target="_blank" rel="noopener">Scientific American</a> — reporting on the Toronto "negative time" experiment.</li>
+          <li><a href="https://www.nist.gov" target="_blank" rel="noopener">NIST / JILA</a> — atomic-clock time-dilation measurements.</li>
+          <li><a href="https://www.sciencedaily.com" target="_blank" rel="noopener">ScienceDaily</a> — time-crystal developments, 2025–2026.</li>
+          <li><a href="https://www.appliedphysics.org" target="_blank" rel="noopener">Applied Physics / Warp Factory</a> — warp-drive research, 2024–2026.</li>
+        </ul>
+      </div>
+
+      <div class="footer-disclaimer">
+        <p>This is a science-communication project. It does not claim that backward time travel has been achieved. All status labels indicate the evidence level as of June 15, 2026. No working time machine exists.</p>
+        <p class="updated mono">Last updated: June 15, 2026</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>document.body.classList.add('js-enabled');</script>
+  <script defer="" src="main.js"></script>
+
+
+</body></html>
